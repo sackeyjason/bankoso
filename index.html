@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>bankoso</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- import the webpage's javascript file -->
+  <script src="/script.js"></script>
+</head>
+
+<body>
+  <div id="game">
+    <div class="level-intro">
+      <span></span>
+    </div>
+  </div>
+  <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+  <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+  <script src="https://button.glitch.me/button.js"></script>
+
+  <template id="levelIntro">
+    <div class="level-intro">
+      <span></span>
+    </div>
+  </template>
+  <script>
+    const levels = [{
+      name: "101 Commercial Street",
+      data:
+        `1111111111111111111111111
+1         1      1      1
+1         1      1   @  1
+1                       1
+1         1      1      1
+11111111111      11111111 
+1         1      1      1
+1                1      1
+1         1      1      1
+1111  11111      111  111
+1         1      1      1
+1  11     1      1      1
+1  11     11111111      E
+1                       1
+1111111111111111111111111`
+    }, {
+      name: 'Switch',
+      data:
+        `
+      11111111
+      1  X  .1
+      1 111 11
+      1 1 1 1
+      1 1 1 1
+      1 1 1 1
+      1 1 1 1
+      1 1 1 1
+      1 1 1 1
+      1 1 1 1
+1111111 1 1D1111111111111
+@       1 1             E
+111111111 111111111111111`
+    }, {
+      name: 'Multi-switch',
+      data:
+        `
+      1111111
+      1     1 
+  11111 111 11111111
+  1.X   1 1   X   .1
+  11111 1 1 11111111
+      1 1 1 1
+  11111 1 1 11111111
+  1.X   1 1   X   .1
+  11111 1 1 11111111
+      1 1 1 1
+1111111 1 1D1111111111111
+@       1 1             E
+111111111 111111111111111`
+    }, {
+      name: "A place for everything, and everything in its place",
+      data:
+        `
+        
+        11111111111111111
+        1   D           E
+      111   1111111111111
+      1. X  1
+      111 X.1
+      1.11  1
+      1 1 . 11
+      1X XXX.1
+      1   .  1
+1111111 111111 
+@       1
+111111111`
+    }];
+  </script>
+  <script>init()</script>
+</body>
+
+</html>
