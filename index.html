@@ -21,16 +21,58 @@
     </div>
   </div>
 
+  <span class="author">
+    <a target="_blank" href="https://twitter.com/jasonksackey">@jasonksackey</a>
+  </span>
+
   <script>
     const levels = [{
+      name: "BANKOSO"
+    }, {
+      name: "by @jasonksackey"
+    }, {
+      name: "controls: ←↑→↓, Space, Enter, Esc"
+    }, {
+      name: "Forest",
+      data: `
+      
+   1      1    1
+      1               1
+            1
+  @  1           1
+
+           1
+  1                    1
+
+              1
+
+        1 1
+        1 1
+111111111E111111111111111`
+    },{
+      name: "Portal",
+      data: `
+      
+      @
+
+
+
+      X
+          11D11
+          1 E 1
+          11111
+                  .
+`
+    },{
       name: "101 Commercial Street",
+      colour: '#333',
       data:
         `1111111111111111111111111
-1         1      1      1
-1         1      1   @  1
-1                       1
-1         1      1      1
-11111111111      11111111 
+1.       .1      1      1
+1 X      X1      1   @  1
+1 X      X              1
+1.       .1      1      1
+11111111111      111D1111 
 1         1      1      1
 1                1      1
 1         1      1      1
@@ -43,7 +85,7 @@
     }, {
       name: 'Switch',
       data:
-        `
+        `0
       11111111
       1  X  .1
       1 111 11
@@ -60,7 +102,7 @@
     }, {
       name: 'Multi-switch',
       data:
-        `
+        `0
       1111111
       1     1 
   11111 111 11111111
@@ -77,23 +119,23 @@
     }, {
       name: "A place for everything, and everything in its place",
       data:
-        `
+        `0
         
-        11111111111111111
-        1   D           E
-      111   1111111111111
+      1111111111111111111
+      1     D           E
+      1     1111111111111
       1. X  1
       111 X.1
       1.11  1
       1 1 . 11
       1X XXX.1
-      1   .  1
+     11   .  1
 1111111 111111 
-@       1
-111111111`
+@       111
+1111111111`
     }, {
       name: 'You win! Thanks for playing',
-      data: `
+      data: `0
 @
 
   XXXXXXXXXXXX

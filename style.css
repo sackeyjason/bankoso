@@ -19,7 +19,7 @@ h1 {
   font-style: italic;
   color: #373fff;
 }
-
+a, :link, :visited { color: white }
 #game {
   display: flex;
   flex-direction: row;
@@ -48,7 +48,13 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-@keyframes fade-out {
+.author {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  z-index: 1;
+}
 
+@keyframes fade-out {
   to { opacity: 0;}
 };

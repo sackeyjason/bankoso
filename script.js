@@ -7,7 +7,7 @@ const TILE_SIZE = 32;
 const LEVEL_WIDTH = 25;
 const LEVEL_HEIGHT = 15;
 const cellColours = {
-  '1': '#EEE',
+  '1': '#999',
   '.': '#555',
   'E': '#222'
 }
@@ -101,7 +101,7 @@ function drawPlayer(ctx) {
 const makeRenderer = (ctx) => () => {
   ctx.beginPath();
   ctx.rect(0, 0, 800, 480);
-  ctx.fillStyle = "#222";
+  ctx.fillStyle = state.levelColour || "#222";
   ctx.fill();
   drawLevel(ctx)
   drawBoxes(ctx)
@@ -198,14 +198,19 @@ function handleKeydown(event) {
 
 function startLevel(level) {
   console.log('level', level)
+  state.levelColour = level.colour;
+  cellColours.E = level.colour || "#222";
   const start = () => {
-    state.level = buildLevel(level.data);
+    if (level.data) {
+      state.level = buildLevel(level.data);
+      document.querySelector('.level-intro').classList.add('fade-out')
+    } else {
+      endLevel();
+    }
     game.removeEventListener('game.startLevel', start);
-    document.querySelector('.level-intro').classList.add('fade-out')
   }
   document.querySelector('.level-intro').classList.remove('fade-out')
-  document.querySelector('.level-intro span').textContent =
-    "Stage " + (levels.indexOf(level) + 1) + ': ' + level.name;
+  document.querySelector('.level-intro span').textContent = level.name;
   game.addEventListener('game.startLevel', start);
 
   render();
